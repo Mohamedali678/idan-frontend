@@ -9,7 +9,7 @@ function WorkerResetPassword() {
     e.preventDefault();
 
     axios
-      .post(`http://localhost:7000/resetPassword`, )
+      .post(`https://idan-backend.onrender.com/resetPassword`, )
       .then((response) => {
         if (response.data.error) {
           toast.error(response.data.error);

@@ -15,7 +15,7 @@ function TotalWorkers() {
   const HandleGetWorkers = () => {
     setLoading(true);
     axios
-      .get("http://localhost:7000/worker/read")
+      .get("https://idan-backend.onrender.com/worker/read")
       .then((response) => {
         setWorkers(response.data);
       })

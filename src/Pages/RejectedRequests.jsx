@@ -13,7 +13,7 @@ function RejectedRequests() {
   const getAllRejectedRequests = () => {
     setLoading(true);
     axios
-      .get("http://localhost:7000/requests/read")
+      .get("https://idan-backend.onrender.com/requests/read")
       .then((res) => {
         const AllRequests = res.data;
         setRejectedRequests(AllRequests.filter((req) => req.status === "Rejected"));

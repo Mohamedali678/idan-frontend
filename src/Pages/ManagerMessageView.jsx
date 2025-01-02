@@ -16,7 +16,7 @@ function ManagerMessageView (){
     // to store the status (pending, accpeted and rejected)
     // const [statusUpdate, setStatusUpdate] = useState("")
     const HandleGetMessage = () => {
-        axios.get(`http://localhost:7000/request/${params.id}`).then((response) => {
+        axios.get(`https://idan-backend.onrender.com/request/${params.id}`).then((response) => {
             // console.log(response.data)
             setGetMessage(response.data)
             calculateDuration(response.data.startDate, response.data.endDate); // Calculate duration when data is fetched
@@ -29,7 +29,7 @@ function ManagerMessageView (){
     // Function oo update gareenaayo xaalada qofka
     const HandleUpdateStatus = (ID, statusUpdate) => {
         // console.log(ID, statusUpdate)
-        axios.put(`http://localhost:7000/update/status/${ID}`, {
+        axios.put(`https://idan-backend.onrender.com/update/status/${ID}`, {
             "status": statusUpdate, 
          
         }).then((res) => {

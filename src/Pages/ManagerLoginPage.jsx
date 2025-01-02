@@ -10,7 +10,7 @@ function ManagerLoginPage (){
     const navigate = useNavigate()
     const HandleAdmin = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:7000/admin/login",{
+        axios.post("https://idan-backend.onrender.com/admin/login",{
             "id": ID,
             "password": Password
         }).then((response) => {

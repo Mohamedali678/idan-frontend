@@ -18,7 +18,7 @@ function WorkerForm() {
 
     const HandlePostRequest = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:7000/new/request", {
+        axios.post("https://idan-backend.onrender.com/new/request", {
             "fullName": JSON.parse(worker).name,
             "ID": JSON.parse(worker).id,
             "title": JSON.parse(worker).title,

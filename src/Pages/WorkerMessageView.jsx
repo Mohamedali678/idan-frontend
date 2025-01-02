@@ -27,7 +27,7 @@ function WorkerMessageView() {
   
   const admin = localStorage.getItem('admin'); // admin is key in local storage NOte meelwalbana admin ka dhig 
   const HandleGetRequests = () => {
-    axios.get(`http://localhost:7000/request/${params.id}`).then((response) => {
+    axios.get(`https://idan-backend.onrender.com/request/${params.id}`).then((response) => {
       setRequest(response.data)
       setName(response.data.fullName)
       setTitle(response.data.title)

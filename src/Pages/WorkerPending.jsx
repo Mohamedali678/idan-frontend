@@ -14,7 +14,7 @@ function WorkerPendingRequests (){
 
     const getAllPendingRequests = () => {
         setLoading(true)
-            axios.get(`http://localhost:7000/request/SingleRead/${JSON.parse(id).id}`).then((res) => {
+            axios.get(`https://idan-backend.onrender.com/request/SingleRead/${JSON.parse(id).id}`).then((res) => {
                 const WorkerPending = res.data;
                 const filteredRequest = WorkerPending.filter((req) => req.status === "pending")
                 setAllPendingRequests(filteredRequest)

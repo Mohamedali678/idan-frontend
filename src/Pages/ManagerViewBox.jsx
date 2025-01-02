@@ -11,7 +11,7 @@ function ManagerViewBox (){
     const [status, setStatus] = useState({})
 
     const HandleGetMore = (ID) => {
-        axios.get(`http://localhost:7000/request/${params.ID}`).then((response) => {
+        axios.get(`https://idan-backend.onrender.com/request/${params.ID}`).then((response) => {
             setViewMore(response.data)
         }).catch((err) => {
             console.log(err)
@@ -21,7 +21,7 @@ function ManagerViewBox (){
 
     // }
     const HandleDeleteRequest = () => {
-        axios.delete(`http://localhost:7000/request/delete/${params.ID}`).then((response) => {
+        axios.delete(`https://idan-backend.onrender.com/request/delete/${params.ID}`).then((response) => {
             console.log(response)
             alert("Request has been deleted successfully")
             navigate("/workerDashboard")

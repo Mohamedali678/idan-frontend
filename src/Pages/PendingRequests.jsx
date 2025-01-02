@@ -18,7 +18,7 @@ function PendingRequests() {
   const getAllPendingRequests = () => {
     setLoading(true);
     axios
-      .get("http://localhost:7000/requests/read")
+      .get("https://idan-backend.onrender.com/requests/read")
       .then((res) => {
         const Allrequests = res.data;
         const allPending = Allrequests.filter((req) => req.status === "pending");

@@ -19,7 +19,7 @@ function WorkerViewMore() {
 
   const HandleViewMore = () => {
     axios
-      .get(`http://localhost:7000/request/${params.id}`)
+      .get(`https://idan-backend.onrender.com/request/${params.id}`)
       .then((response) => {
         setViewMore(response.data);
         setName(response.data.name)

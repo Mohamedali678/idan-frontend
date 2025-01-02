@@ -16,7 +16,7 @@ function AdminDetail (){
     const navigate = useNavigate();
     const [SingleAdmin, setSingleAdmin] = useState({})
     const HandleSingleAdmin = (id) => {
-        axios.get(`http://localhost:7000/Admin/SingleAdmin/${params._id}`).then((response) => {
+        axios.get(`https://idan-backend.onrender.com/Admin/SingleAdmin/${params._id}`).then((response) => {
             setSingleAdmin(response.data)
         }).catch((error) => {
             console.error(error)
@@ -24,7 +24,7 @@ function AdminDetail (){
     }
 
     const HandleDeleteAdmin = (_id) =>{
-        axios.delete(`http://localhost:7000/admin/delete/${params._id}`).then(() => {
+        axios.delete(`https://idan-backend.onrender.com/admin/delete/${params._id}`).then(() => {
          toast.success("Admin has been deleted successfully")
          setTimeout(() => {
              navigate("/totalAdmins")

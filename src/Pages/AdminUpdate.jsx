@@ -16,7 +16,7 @@ function AdminUpdate (){
     const [PhoneNumber, setPhoneNumber] = useState("")
     const [Password, setPassword] = useState("")
      const HandleGetSingleAdmin = () => {
-        axios.get(`http://localhost:7000/Admin/SingleAdmin/${params._id}`).then((response) => {
+        axios.get(`https://idan-backend.onrender.com/Admin/SingleAdmin/${params._id}`).then((response) => {
             setName(response.data.name)
             setID(response.data.id)
             setTitle(response.data.title)
@@ -32,7 +32,7 @@ function AdminUpdate (){
 
      const HandleUpdateAdmin = (e) => {
         e.preventDefault();
-        axios.put(`http://localhost:7000/Admin/update/${params._id}`, {
+        axios.put(`https://idan-backend.onrender.com/Admin/update/${params._id}`, {
             "name" : Name,
             "id" : ID,
             "title" : Title,

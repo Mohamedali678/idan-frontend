@@ -13,7 +13,7 @@ function WorkerAcceptedRequests (){
     const id = localStorage.getItem("worker")
     const getAllApprovedRequests = () => {
         setLoading(true)
-        axios.get(`http://localhost:7000/request/SingleRead/${JSON.parse(id).id}`).then((res) => {
+        axios.get(`https://idan-backend.onrender.com/request/SingleRead/${JSON.parse(id).id}`).then((res) => {
             const workerApproved = res.data;
             const filteredRequest = workerApproved.filter((req) => req.status === "Approved")
             setAcceptedRequests(filteredRequest)

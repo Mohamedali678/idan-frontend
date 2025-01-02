@@ -19,7 +19,7 @@ function WorkerViewBox() {
 
   const HandleGetMore = () => {
     axios
-      .get(`http://localhost:7000/request/${params.id}`)
+      .get(`https://idan-backend.onrender.com/request/${params.id}`)
       .then((response) => {
         setViewMore(response.data);
         setName(response.data.name)
@@ -35,7 +35,7 @@ function WorkerViewBox() {
 
   const HandleDeleteRequest = (id) => {
     console.log(ViewMore.id)
-    axios.delete(`http://localhost:7000/requests/delete/${params.id}`).then((response) => {
+    axios.delete(`https://idan-backend.onrender.com/requests/delete/${params.id}`).then((response) => {
         console.log(response);
         toast.success("Request has been deleted successfully");
         setTimeout(() => {

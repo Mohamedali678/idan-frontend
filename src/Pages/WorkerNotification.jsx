@@ -11,7 +11,7 @@ import WorkerSideBar from "../Components/WorkerSideBar";
 function WorkerNotificationPage (){
     const [Notifications, setNotifications] = useState([])
     const HandleGetNotification = () => {
-        axios.get("http://localhost:7000/requests/read").then((response) => {
+        axios.get("https://idan-backend.onrender.com/requests/read").then((response) => {
             setNotifications(response.data)
         }).catch((error) => {
             console.log(error)
@@ -20,7 +20,7 @@ function WorkerNotificationPage (){
 
 
     const HandleDeleteNotification = (_id) => {
-        axios.delete(`http://localhost:7000/requests/delete/${_id}`).then(() => {
+        axios.delete(`https://idan-backend.onrender.com/requests/delete/${_id}`).then(() => {
             alert("Notification deleted successfully")
         }).catch((error) => {
             console.log(error)

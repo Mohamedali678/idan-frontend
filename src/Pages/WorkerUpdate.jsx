@@ -15,7 +15,7 @@ function WorkerUpdate (){
     const [PhoneNumber, setPhoneNumber] = useState("")
     const [Password, setPassword] = useState("")
      const HandleGetSingleWorker = () => {
-        axios.get(`http://localhost:7000/SingleWorker/${params._id}`).then((response) => {
+        axios.get(`https://idan-backend.onrender.com/SingleWorker/${params._id}`).then((response) => {
             setName(response.data.name)
             setID(response.data.id)
             setTitle(response.data.title)
@@ -29,7 +29,7 @@ function WorkerUpdate (){
      
      const HandleUpdateWorker = (e) => {
         e.preventDefault();
-        axios.put(`http://localhost:7000/worker/update/${params._id}`, {
+        axios.put(`https://idan-backend.onrender.com/worker/update/${params._id}`, {
             "name" : Name,
             "id" : ID,
             "title" : Title,

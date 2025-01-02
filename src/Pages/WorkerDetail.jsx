@@ -16,7 +16,7 @@ function WorkerDetail (){
     const navigate = useNavigate();
     const [SingleWorker, setSingleWorker] = useState({})
     const HandleGetSingleWorker = (_id) => {
-        axios.get(`http://localhost:7000/SingleWorker/${params._id}`).then((response) => {
+        axios.get(`https://idan-backend.onrender.com/SingleWorker/${params._id}`).then((response) => {
             setSingleWorker(response.data)
         }).catch((error) => {
             console.error(error)
@@ -24,7 +24,7 @@ function WorkerDetail (){
     }
 
     const HandleDeleteWorker = (_id) =>{
-        axios.delete(`http://localhost:7000/worker/delete/${params._id}`).then(() => {
+        axios.delete(`https://idan-backend.onrender.com/worker/delete/${params._id}`).then(() => {
          toast.success("Worker has been deleted successfully")
          setTimeout(() => {
             navigate("/totalWorkers")

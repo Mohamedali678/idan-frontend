@@ -13,7 +13,7 @@ function WorkerRejectedRequests (){
     
     const getAllPendingRequests = () => {
         setLoading(true)
-            axios.get(`http://localhost:7000/request/SingleRead/${JSON.parse(id).id}`).then((res) => {
+            axios.get(`https://idan-backend.onrender.com/request/SingleRead/${JSON.parse(id).id}`).then((res) => {
                 const workerRejected = res.data;
                 const filteredRequests = workerRejected.filter(request => request.status === "Rejected");
                 setRejectedRequests(filteredRequests)

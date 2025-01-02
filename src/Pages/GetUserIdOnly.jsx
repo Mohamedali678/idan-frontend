@@ -7,7 +7,7 @@ function GetUserIdOnly() {
     const [getAllUsersForget, setGetAllUsersForget] = useState([])
 
     const handlegetAllUsersForget = ()=>{
-        axios.get("http://localhost:7000/getAllIdUsersForget").then((response)=>{
+        axios.get("https://idan-backend.onrender.com/getAllIdUsersForget").then((response)=>{
             setGetAllUsersForget(response.data)
         }).catch((erro)=>{
             console.log(erro);

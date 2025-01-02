@@ -16,7 +16,7 @@ function AddWorker (){
 
     const HandleAddWorker = (e) => {
         e.preventDefault()
-        axios.post("http://localhost:7000/worker/create", {
+        axios.post("https://idan-backend.onrender.com/worker/create", {
             "name": Name,
             "id" : ID,
             "title" : Title,

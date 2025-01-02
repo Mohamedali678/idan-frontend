@@ -16,7 +16,7 @@ function AddAdmin (){
 
     const HandleAddAdmin = (e) => {
         e.preventDefault()
-        axios.post("http://localhost:7000/admin/create", {
+        axios.post("https://idan-backend.onrender.com/admin/create", {
             "name" : Name,
             "id" : ID,
             "title" : Title,

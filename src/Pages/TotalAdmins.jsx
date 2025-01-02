@@ -14,7 +14,7 @@ function TotalAdmins() {
   const HandleGetAdmins = () => {
     setLoading(true);
     axios
-      .get("http://localhost:7000/Admin/read")
+      .get("https://idan-backend.onrender.com/Admin/read")
       .then((response) => {
         setAdmins(response.data);
       })

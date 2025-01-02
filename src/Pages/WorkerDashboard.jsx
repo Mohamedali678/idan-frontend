@@ -19,7 +19,7 @@ function WorkerDashboard() {
 
     const HandleGetResult = () => {
         // setLoading(true);
-        axios.get(`http://localhost:7000/request/SingleRead/${JSON.parse(id).id}`)
+        axios.get(`https://idan-backend.onrender.com/request/SingleRead/${JSON.parse(id).id}`)
             .then((response) => {
                 setRequests(response.data);
                 // Filter approved, pending, and rejected requests and count them

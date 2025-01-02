@@ -20,7 +20,7 @@ function AcceptedRequests() {
   const getAllAcceptedRequests = () => {
     setLoading(true);
     axios
-      .get("http://localhost:7000/requests/read")
+      .get("https://idan-backend.onrender.com/requests/read")
       .then((res) => {
         const AllRequests = res.data;
         setRequests(AllRequests);
