@@ -40,13 +40,10 @@ function ManagerLoginPage (){
      <div className="w-full h-screen flex  my-40 sm:my-20  justify-center ">
      <div className="bg-white pt-[15px] shadow-lg px-4 w-[350px] h-[350px] rounded-[5px]">
         <h1 className="  text-[30px] text-center font-semibold text-[#0E0E0E]  "> Sign in </h1>
-        <p className="  text-gray-600 text-center px-[40px] text-[14px] pr-[20px]"> Log in with your <span className="font-semibold text-black">Admin ID and password </span> to access the management dashboard.</p>
         <form className="mt-4">
-            <label className=" text-[15px]"> Admin ID </label>
-            <input value={ID} onChange={(event) => setID(event.target.value)} className="w-[310px] px-1 h-[40px] outline-none  mb-2 rounded-[5px] border-2 border-[#008081] " type="text" />
-            <label className=" text-[15px]"> Admin Password </label>
-            <input value={Password} onChange={(event) => setPassword(event.target.value)} className="w-[310px] px-1  h-[40px] outline-none rounded-[5px] border-2 border-[#008081] " type="password" />
-            <button onClick={HandleAdmin} className="w-[310px] h-[35px] mt-7 text-white  hover:bg-[#0E0E0E] hover:text-white  bg-[#008081] rounded-[5px]"> Submit </button>
+            <input value={ID} placeholder="ID" onChange={(event) => setID(event.target.value)} className="w-[310px]  h-[45px]  p-2 focus:border-blue-500 focus:outline-none transition duration-200  mb-3 border-[#008081] rounded-md border  " type="text" />
+            <input placeholder="Password" value={Password} onChange={(event) => setPassword(event.target.value)} className="w-[310px] mt-4  h-[45px]  p-2 focus:border-blue-500 focus:outline-none transition duration-200  mb-3 border-[#008081] rounded-md border  " type="password" />
+            <button onClick={HandleAdmin} className="w-[310px] h-[45px] mt-7 text-white  hover:bg-[#0E0E0E] hover:text-white  bg-[#008081] rounded-[5px]"> Submit </button>
         </form>
     </div>
     </div>
