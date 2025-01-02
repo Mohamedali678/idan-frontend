@@ -84,8 +84,8 @@ function WorkerDashboard() {
                         <div className="mt-4 overflow-x-auto">
                             <table className="shadow-md rounded-lg w-full text-left border-collapse">
                                 <thead>
-                                    <tr className="bg-[#008081] text-white font-semibold">
-                                        <td className="p-4 text-center rounded-tl-lg">No.</td>
+                                    <tr className="bg-[#008081] text-white text-[14px] font-semibold">
+                                        <td className="p-4 text-center text-sm rounded-tl-lg">No.</td>
                                         <td className="p-4 text-center">Start Date</td>
                                         <td className="p-4 text-center">End Date</td>
                                         <td className="p-4 text-center">Status</td>

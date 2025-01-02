@@ -23,7 +23,7 @@ function WorkerFooter(){
         navigate("/");
     }
     return <div className=" ">
-    <div className="bg-[#008081] sm:hidden flex h-[55px] justify-around items-center gap-10 pt-2 w-full absolute bottom-0">
+    <div className="bg-[#008081] sm:hidden flex h-[55px] justify-around items-center gap-10 pt-2 w-full fixed bottom-0">
         <Link to="/workerDashboard">
             <div className="">
                 <LuLayoutDashboard className="sm:text-[28px] text-[30px] hover:text-black ml-5  text-white" />
